@@ -42,8 +42,7 @@ Evaluate the model using the test dataset and visualize the results (accuracy, c
 
 ### Register Number: 212223230057
 
-```python
-
+```
 import torch as t
 import torch.nn as nn
 import torch.optim as optim
@@ -95,8 +94,6 @@ model=CNNClassifier()
 if t.cuda.is_available():
   device=t.device("cuda")
   model.to(device)
-print("Name: YOGESH.S")
-print("Reg.no: 212224230311")
 summary(model,input_size=(1,28,28))
 criterion=nn.CrossEntropyLoss()
 optimizer=optim.Adam(model.parameters(),lr=0.001)
@@ -114,8 +111,7 @@ def train_model(model,train_loader,num_epochs):
       optimizer.step()
       running_loss+=loss.item()
     print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}")
-print("Name: YOGESH.S")
-print("Reg.no: 212224230311")
+
 
 train_model(model,train_loader,num_epochs=10)
 
@@ -138,22 +134,16 @@ def test_model(model, test_loader):
       all_labels.extend(labels.cpu().numpy())
 
   accuracy = correct/total
-  print("Name: YOGESH.S")
-  print("Reg.no: 212224230311")
   print(f"Test Accuracy: {accuracy:.4f}")
 
   cm = confusion_matrix(all_labels, all_preds)
   plt.figure(figsize=(8, 6))
-  print("Name: YOGESH.S")
-  print("Reg.no: 212224230311")
   sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=test_dataset.classes, yticklabels=test_dataset.classes)
   plt.xlabel("Predicted")
   plt.ylabel("Actual")
   plt.title("Confusion Matrix")
   plt.show()
 
-  print("Name: YOGESH.S")
-  print("Reg.no: 212224230311")
   print("Classification Report:")
   print(classification_report(all_labels, all_preds, target_names=[str(i) for i in range(10)]))
 test_model(model, test_loader)
@@ -168,8 +158,6 @@ def predict_image(model,image_index,dataset):
     output=model(image.unsqueeze(0))
     _,predicted=t.max(output,1)
   class_names=[str(i) for i in range(10)]
-  print("Name: YOGESH.S")
-  print("Reg.no: 212224230311")
   plt.imshow(image.cpu().squeeze(0),cmap='gray')
   plt.title(f"Actual: {class_names[label]}\nPredicted: {class_names[predicted.item()]}")
   plt.axis("off")
@@ -182,22 +170,17 @@ predict_image(model,image_index=80,dataset=test_dataset)
 
 ## Training Loss per Epoch
 
-<img width="307" height="373" alt="image" src="https://github.com/user-attachments/assets/93d686ca-0964-48c1-a3c4-423ceaf8920c" />
-
 
 ## Confusion Matrix
 
-<img width="936" height="782" alt="image" src="https://github.com/user-attachments/assets/93cb9b78-1689-4d0e-ac21-51e1e3ac448b" />
 
 
 ## Classification Report
 
-<img width="562" height="426" alt="image" src="https://github.com/user-attachments/assets/1c3c7c32-a6ca-4977-a673-63b50c2b1792" />
 
 
 ### New Sample Data Prediction
 
-<img width="545" height="642" alt="image" src="https://github.com/user-attachments/assets/46385454-ffdf-4914-802e-541b7556a265" />
 
 
 ## RESULT
