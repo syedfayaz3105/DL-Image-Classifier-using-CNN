@@ -218,21 +218,19 @@ test_model(model, test_loader)
 ### OUTPUT
 ## Training Loss per Epoch
 
-<img width="250" height="135" alt="Screenshot 2025-11-17 200645" src="https://github.com/user-attachments/assets/5fb14076-ac62-4203-ba41-c59292798e8e" />
-
+<img width="585" height="580" alt="Screenshot 2025-11-25 071418" src="https://github.com/user-attachments/assets/0e0451bd-8272-4f29-a5fb-ab79c2e46d2a" />
 
 ## Confusion Matrix
-<img width="397" height="331" alt="Screenshot 2025-11-17 185406" src="https://github.com/user-attachments/assets/f36e7a29-3375-496d-b3cc-4ed5b3672644" />
 
+![Uploading Screenshot 2025-11-25 071626.png…]()
 
 
 ## Classification Report
-
-<img width="338" height="178" alt="Screenshot 2025-11-17 185426" src="https://github.com/user-attachments/assets/dd6d1e91-dd6e-46ec-8fc1-c0385aa4b1e5" />
+<img width="705" height="436" alt="Screenshot 2025-11-25 071554" src="https://github.com/user-attachments/assets/7c85562f-6c54-4551-8bd3-b886e1edb378" />
 
 ### New Sample Data Prediction
-<img width="338" height="392" alt="Screenshot 2025-11-17 201352" src="https://github.com/user-attachments/assets/c619d37a-19bd-472b-a1d0-ec98f8ae4d85" />
 
+<img width="567" height="641" alt="Screenshot 2025-11-25 071316" src="https://github.com/user-attachments/assets/8bc6364c-2ba8-4f3f-9d86-5f9b9dd0b43d" />
 
 ## RESULT
 Thus,developing a convolutional neural network (CNN) classification model for the given dataset was executed successfully.
